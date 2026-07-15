@@ -31,29 +31,29 @@
             padding: 100px 20px;
         }
 
-        /* [수정] 카드 크기 30% 축소 및 내부 정렬 강화 */
         .card { 
             background: rgba(255, 255, 255, 0.15); 
             padding: 35px; border-radius: 30px; 
             backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);
-            text-align: center; width: 56%; /* 기존 80%에서 30% 축소 (80 * 0.7) */
+            text-align: center; width: 56%; 
             max-width: 600px;
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* [수정] 글자 크기 30% 축소 */
         h1 { font-size: 2.5em; margin-bottom: 15px; }
         h2 { font-size: 2.2em; margin-bottom: 15px; color: #ffcc00; }
         p { font-size: 1.1em; }
         
-        /* [수정] 이미지 크기 30% 축소 및 레이아웃 제한 */
+        /* [수정] 이미지 잘림 방지 스타일 */
         img { 
-            width: 200px; height: 200px; /* 기존 300px에서 30% 축소 */
-            border-radius: 50%; margin: 15px 0; 
+            width: 100%;       /* 카드의 너비에 맞춤 */
+            max-width: 300px;  /* 최대 크기 제한 */
+            height: auto;      /* 비율 유지 */
+            border-radius: 0;  /* [변경] 원형을 직사각형(원래 상태)으로 변경 */
+            margin: 15px 0; 
             border: 5px solid #fff;
-            object-fit: cover; 
+            object-fit: contain; /* [변경] 이미지가 잘리지 않고 전체 표시됨 */
             background-color: rgba(255,255,255,0.2);
-            flex-shrink: 0; /* 이미지가 찌그러지지 않게 설정 */
         }
     </style>
 </head>
