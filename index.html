@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>배재연의 자기소개</title>
-    <!-- 구글 폰트: Poor Story (타이틀용) 및 Jua (본문용) -->
+    <!-- 구글 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poor+Story&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,43 +16,41 @@
             background-attachment: fixed;
         }
 
-        /* 타이틀에 Poor Story 폰트 적용 */
         h1, h2 { font-family: 'Poor Story', cursive; }
 
         /* 상단 네비게이션 */
         nav { 
-            position: fixed; top: 0; width: 100%; padding: 25.5px; 
+            position: fixed; top: 0; width: 100%; padding: 20px; 
             text-align: center; z-index: 1000; background: rgba(0,0,0,0.3); 
-            backdrop-filter: blur(10px); font-size: 2.21em;
+            backdrop-filter: blur(10px); font-size: 1.5em;
         }
-        nav a { color: #fff; text-decoration: none; margin: 0 34px; font-weight: bold; transition: 0.3s; }
+        nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; }
         nav a:hover { color: #ffcc00; }
 
-        /* 섹션 설정 */
+        /* [수정] min-height 사용: 100vh 고정 시 내용이 길어지면 겹치므로, 최소 높이로 변경 */
         section { 
-            height: 100vh; display: flex; flex-direction: column; 
-            justify-content: center; align-items: center; padding: 42.5px;
+            min-height: 100vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; padding: 100px 20px;
         }
 
-        /* 카드 설정 */
+        /* [수정] 카드 패딩 감소: 100% 비율에서 내용이 너무 꽉 차서 겹치지 않도록 공간 확보 */
         .card { 
             background: rgba(255, 255, 255, 0.15); 
-            padding: 85px; border-radius: 51px; 
-            backdrop-filter: blur(20px); border: 1.7px solid rgba(255,255,255,0.3);
-            text-align: center; width: 72.25%; max-width: 1190px;
+            padding: 50px; border-radius: 40px; 
+            backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3);
+            text-align: center; width: 80%; max-width: 900px;
         }
 
-        /* 글자 크기 */
-        h1 { font-size: 6.8em; margin-bottom: 42.5px; }
-        h2 { font-size: 5.95em; margin-bottom: 34px; color: #ffcc00; }
-        p { font-size: 3.06em; }
+        /* [수정] 글자 크기 조정: 기존보다 가독성을 위해 살짝 축소하여 카드 내 배치 최적화 */
+        h1 { font-size: 4em; margin-bottom: 30px; }
+        h2 { font-size: 3.5em; margin-bottom: 25px; color: #ffcc00; }
+        p { font-size: 1.8em; }
         
-        /* 이미지 설정 */
+        /* [수정] 이미지 크기 반응형: 고정 픽셀(px) 대신 %와 max-width를 사용하여 화면 비율에 맞춰 자동 조절 */
         img { 
-            width: 765px; height: 765px; 
-            border-radius: 50%; margin-bottom: 42.5px; 
-            border: 12.75px solid #fff;
-            object-fit: contain; 
+            width: 80%; max-width: 400px; height: auto; 
+            border-radius: 50%; margin-bottom: 30px; 
+            border: 8px solid #fff;
             background-color: rgba(255,255,255,0.2);
         }
     </style>
@@ -85,7 +83,7 @@
     <section id="goal">
         <div class="card">
             <h2>목표</h2>
-            <p>"5개월 후, 파이썬을 활용한<br>AI 모델 하겠습니다!"</p>
+            <p>"5개월 후, 파이썬을 활용한<br>AI 모델 구현 전문가가 되겠습니다!"</p>
         </div>
     </section>
 
