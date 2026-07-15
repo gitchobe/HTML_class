@@ -44,15 +44,25 @@
         h2 { font-size: 2.2em; margin-bottom: 15px; color: #ffcc00; }
         p { font-size: 1.1em; }
         
-        /* [최종 수정] 이미지 잘림 방지: 사각형으로 표시하고 비율 유지 */
+        /* 일반 프로필 이미지 스타일 */
         img { 
+            width: 200px; height: 200px;
+            border-radius: 50%; /* 원형 유지 */
+            object-fit: cover;
+            margin: 20px 0;
+            border: 5px solid #fff;
+        }
+
+        /* [핵심] 취미 이미지만을 위한 전용 스타일 */
+        .hobby-img { 
             width: 100%;       
             max-width: 400px;  
             height: auto;      
             border-radius: 0;  /* 원형 자르기 해제 */
             margin: 20px 0; 
             border: none;      
-            object-fit: contain; /* 이미지 전체가 보이도록 설정 */
+            object-fit: contain; /* 이미지가 잘리지 않고 전체 표시 */
+            background-color: transparent; 
         }
     </style>
 </head>
@@ -91,7 +101,7 @@
     <section id="hobby">
         <div class="card">
             <h2>취미</h2>
-            <img src="./images/취.png" alt="취미">
+            <img src="./images/취.png" alt="취미" class="hobby-img">
             <p>요리의 창의성과 에어로빅의 에너지를 통해<br>매일매일 성장하고 있습니다.</p>
         </div>
     </section>
